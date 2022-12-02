@@ -1,8 +1,9 @@
-import { GlobalStyles } from "./styles/GlobalStyles";
+import React from 'react';
+import { GlobalStyles } from './styles/GlobalStyles';
 
-function App() {
+function App(): JSX.Element {
   return (
-    <div className="App">
+    <div className='App'>
       <GlobalStyles />
     </div>
   );
