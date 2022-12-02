@@ -11,6 +11,7 @@
 - styled-component : css-in-js
 - react-query: data fetching
 - storybook: UI 개발 도구
+- jest: testing library
 
 ## 실행
 
