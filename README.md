@@ -10,6 +10,7 @@
 - react-router-dom : url 관리
 - styled-component : css-in-js
 - react-query: data fetching
+- storybook: UI 개발 도구
 
 ## 실행
 
