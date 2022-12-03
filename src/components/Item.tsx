@@ -17,11 +17,10 @@ const Item = ({
   onClickItem,
 }: ItemProps) => {
   return (
-    <Container onClick={() => onClickItem(id)}>
-      <img
-        src={download_url}
-        alt={author}
-      />
+    <Container
+      onClick={() => onClickItem(id)}
+      bg={download_url}
+    >
       <Author>{author}</Author>
     </Container>
   );
@@ -35,18 +34,15 @@ const Author = styled.h6`
   color: #fff;
   font-size: 20px;
   font-weight: 700;
-  padding: 24px;
+  padding: 20px;
 `;
 
 const Container = styled.div`
   position: relative;
-  width: 400px;
-  height: 300px;
   cursor: pointer;
-  img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
+  width: 100%;
+  padding-bottom: 100%;
+  background-image: url(${({ bg }: any) => bg});
+  background-size: cover;
 `;
 export default Item;
