@@ -10,10 +10,6 @@ interface GalleryProps {
 }
 
 const Gallery = ({ data, loading = false }: GalleryProps) => {
-  const onClickItem = (id: string) => {
-    console.log('id', id);
-  };
-
   if (loading) return <div>loading</div>;
 
   if (data?.length === 0) return <div>empty</div>;
@@ -24,7 +20,6 @@ const Gallery = ({ data, loading = false }: GalleryProps) => {
         <Item
           key={item.id}
           {...item}
-          onClickItem={onClickItem}
         />
       ))}
     </Container>

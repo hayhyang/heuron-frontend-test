@@ -1,28 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { IItem } from '../../models/interface/item';
 
-interface ItemProps extends IItem {
-  onClickItem: (id: string) => void;
-}
-
-const Item = ({
-  id,
-  author,
-  width,
-  height,
-  url,
-  download_url,
-  onClickItem,
-}: ItemProps) => {
-  console.log('item component working');
+const Item = ({ id, author, width, height, url, download_url }: IItem) => {
   return (
-    <Container onClick={() => onClickItem(id)}>
-      <img
-        src={download_url}
-        alt={author}
-      />
+    <Container>
+      <Link to={id}>
+        <img
+          src={download_url}
+          alt={author}
+        />
+      </Link>
     </Container>
   );
 };
