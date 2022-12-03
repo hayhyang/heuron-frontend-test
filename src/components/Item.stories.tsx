@@ -1,6 +1,5 @@
 import React from 'react';
 import { Story } from '@storybook/react';
-import { IItem } from '../models/interface/item';
 import Item from './Item';
 
 export default {
@@ -8,7 +7,7 @@ export default {
   component: Item,
 };
 
-const Template: Story<IItem> = (args: IItem) => <Item {...args} />;
+const Template: Story = (args: any) => <Item {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
