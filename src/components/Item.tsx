@@ -16,33 +16,25 @@ const Item = ({
   download_url,
   onClickItem,
 }: ItemProps) => {
+  console.log('item component working');
   return (
-    <Container
-      onClick={() => onClickItem(id)}
-      bg={download_url}
-    >
-      <Author>{author}</Author>
+    <Container onClick={() => onClickItem(id)}>
+      <img
+        src={download_url}
+        alt={author}
+      />
     </Container>
   );
 };
-
-const Author = styled.h6`
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 700;
-  padding: 20px;
-`;
 
 const Container = styled.div`
   position: relative;
   cursor: pointer;
   width: 100%;
-  padding-bottom: 100%;
-  background-image: url(${({ bg }: any) => bg});
-  background-size: cover;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 export default Item;

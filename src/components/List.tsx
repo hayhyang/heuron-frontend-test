@@ -16,7 +16,7 @@ const List = ({ data, loading = false }: ListProps) => {
 
   if (loading) return <div>loading</div>;
 
-  if (data.length === 0) return <div>empty</div>;
+  if (data?.length === 0) return <div>empty</div>;
 
   return (
     <Container>
