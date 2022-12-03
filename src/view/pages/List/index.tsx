@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ListContainer from 'components/container/ListContainer';
+import ListContainer from 'view/container/ListContainer';
 
 const ListPage = () => {
   return <ListContainer />;
