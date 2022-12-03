@@ -4,12 +4,12 @@ import { IItem } from 'models/interface/item';
 import Item from './Item';
 import styled from 'styled-components';
 
-interface ListProps {
+interface GalleryProps {
   data?: any;
   loading?: boolean;
 }
 
-const List = ({ data, loading = false }: ListProps) => {
+const Gallery = ({ data, loading = false }: GalleryProps) => {
   const onClickItem = (id: string) => {
     console.log('id', id);
   };
@@ -39,4 +39,4 @@ const Container = styled.ul`
   gap: 4px;
 `;
 
-export default List;
+export default Gallery;

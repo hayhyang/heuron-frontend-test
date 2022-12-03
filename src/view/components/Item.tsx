@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { IItem } from '../models/interface/item';
+import { IItem } from '../../models/interface/item';
 
 interface ItemProps extends IItem {
   onClickItem: (id: string) => void;

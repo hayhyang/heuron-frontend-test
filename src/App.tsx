@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import GlobalStyles from './styles/GlobalStyles';
-import ListPage from 'components/pages/List';
+import GalleryPage from 'view/pages/Gallery';
 
 function App(): JSX.Element {
   return (
@@ -12,7 +12,7 @@ function App(): JSX.Element {
         <Routes>
           <Route
             path='/'
-            element={<ListPage />}
+            element={<GalleryPage />}
           />
         </Routes>
       </BrowserRouter>
