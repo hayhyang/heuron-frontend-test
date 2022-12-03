@@ -1,6 +1,6 @@
 import { Story } from '@storybook/react';
 import React from 'react';
-import Gallery from './List';
+import Gallery from './Gallery';
 
 export default {
   title: 'Gallery',
