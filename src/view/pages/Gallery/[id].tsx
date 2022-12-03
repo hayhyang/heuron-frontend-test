@@ -1,7 +1,9 @@
 import React from 'react';
 
+import GalleryDetailContainer from 'view/container/Gallery/GalleryDetailContainer';
+
 const GalleryDetail = () => {
-  return <div>GalleryDetail</div>;
+  return <GalleryDetailContainer />;
 };
 
 export default GalleryDetail;

@@ -1,5 +1,5 @@
 import React from 'react';
-import GalleryContainer from 'view/container/GalleryContainer';
+import GalleryContainer from 'view/container/Gallery/GalleryContainer';
 
 const GalleryPage = () => {
   return <GalleryContainer />;
