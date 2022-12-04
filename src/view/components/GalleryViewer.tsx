@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Loading from './common/Loading';
 
@@ -26,10 +25,8 @@ const GalleryViewer = ({ data, loading }: CanvasProps) => {
 
   if (loading) return <Loading />;
 
-
   return (
     <Canvas
-      onWheel={onWheel}
       ref={canvasRef}
       width={window.innerWidth}
       height={window.innerHeight}
