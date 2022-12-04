@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import Loading from './common/Loading';
 
 interface CanvasProps {
   data: any;
@@ -23,21 +24,8 @@ const GalleryViewer = ({ data, loading }: CanvasProps) => {
     };
   });
 
-  const navigate = useNavigate();
-  const onWheel = (event: any) => {
-    if (event.deltaY > 0) {
-      console.log('위로');
-      if (data.id < 0) return;
-      navigate(`/${Number(data.id) + 1}`);
-    }
-    if (event.deltaY < 0) {
-      console.log('아래로');
-      if (data.id > 29) return;
-      navigate(`/${Number(data.id) - 1}`);
-    }
-  };
+  if (loading) return <Loading />;
 
-  if (loading) return <div>loading</div>;
 
   return (
     <Canvas
