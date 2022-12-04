@@ -3,6 +3,7 @@ import React from 'react';
 import GalleryItem from './GalleryItem';
 import styled from 'styled-components';
 import { IGalleryItem } from 'models/interface/galleryItem';
+import Loading from './common/Loading';
 
 interface GalleryProps {
   data?: any;
@@ -10,7 +11,7 @@ interface GalleryProps {
 }
 
 const Gallery = ({ data, loading = false }: GalleryProps) => {
-  if (loading) return <div>loading</div>;
+  if (loading) return <Loading />;
 
   if (data?.length === 0) return <div>empty</div>;
 

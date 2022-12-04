@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import Loading from './common/Loading';
 
 interface CanvasProps {
   data: any;
@@ -22,7 +23,7 @@ const GalleryViewer = ({ data, loading }: CanvasProps) => {
     };
   });
 
-  if (loading) return <div>loading</div>;
+  if (loading) return <Loading />;
 
   return (
     <Canvas
