@@ -1,4 +1,4 @@
-export interface IItem {
+export interface IGalleryItem {
   id: string;
   author: string;
   width: number;

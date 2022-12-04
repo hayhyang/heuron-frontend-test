@@ -1,13 +1,13 @@
 import React from 'react';
 import { Story } from '@storybook/react';
-import Item from './Item';
+import GalleryItem from './GalleryItem';
 
 export default {
-  title: 'Item',
-  component: Item,
+  title: 'GalleryItem',
+  component: GalleryItem,
 };
 
-const Template: Story = (args: any) => <Item {...args} />;
+const Template: Story = (args: any) => <GalleryItem {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

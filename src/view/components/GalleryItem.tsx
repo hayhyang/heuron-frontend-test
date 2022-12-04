@@ -2,12 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { IItem } from '../../models/interface/item';
+import { IGalleryItem } from '../../models/interface/galleryItem';
 
-const Item = ({ id, author, width, height, url, download_url }: IItem) => {
+const GalleryItem = ({
+  id,
+  author,
+  width,
+  height,
+  url,
+  download_url,
+}: IGalleryItem) => {
   return (
     <Container>
-      <Link to={id}>
+      <Link
+        to={id}
+        state={{ id }}
+      >
         <img
           src={download_url}
           alt={author}
@@ -27,4 +37,4 @@ const Container = styled.div`
     object-fit: cover;
   }
 `;
-export default Item;
+export default GalleryItem;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { IItem } from 'models/interface/item';
-import Item from './Item';
+import GalleryItem from './GalleryItem';
 import styled from 'styled-components';
+import { IGalleryItem } from 'models/interface/galleryItem';
 
 interface GalleryProps {
   data?: any;
@@ -16,8 +16,8 @@ const Gallery = ({ data, loading = false }: GalleryProps) => {
 
   return (
     <Container>
-      {data?.map((item: IItem) => (
-        <Item
+      {data?.map((item: IGalleryItem) => (
+        <GalleryItem
           key={item.id}
           {...item}
         />

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import GalleryDetailContainer from 'view/container/Gallery/GalleryDetailContainer';
+import GalleryViewerContainer from 'view/container/Gallery/GalleryViewerContainer';
 
-const GalleryDetail = () => {
-  return <GalleryDetailContainer />;
+const GalleryViewer = () => {
+  return <GalleryViewerContainer />;
 };
 
-export default GalleryDetail;
+export default GalleryViewer;
