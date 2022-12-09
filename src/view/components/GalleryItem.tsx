@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { IGalleryItem } from '../../models/interface/galleryItem';
@@ -14,15 +13,10 @@ const GalleryItem = ({
 }: IGalleryItem) => {
   return (
     <Container>
-      <Link
-        to={id}
-        state={{ id }}
-      >
-        <img
-          src={download_url}
-          alt={author}
-        />
-      </Link>
+      <img
+        src={download_url}
+        alt={author}
+      />
     </Container>
   );
 };
