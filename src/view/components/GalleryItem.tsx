@@ -3,6 +3,10 @@ import styled from 'styled-components';
 
 import { IGalleryItem } from '../../models/interface/galleryItem';
 
+interface GalleryItemProps extends IGalleryItem {
+  onClickItem: (id: string) => void;
+}
+
 const GalleryItem = ({
   id,
   author,
@@ -10,12 +14,14 @@ const GalleryItem = ({
   height,
   url,
   download_url,
-}: IGalleryItem) => {
+  onClickItem,
+}: GalleryItemProps) => {
   return (
     <Container>
       <img
         src={download_url}
         alt={author}
+        onClick={() => onClickItem(id)}
       />
     </Container>
   );

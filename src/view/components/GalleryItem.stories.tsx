@@ -1,23 +1,8 @@
 import React from 'react';
 import { Story } from '@storybook/react';
-import GalleryItem from './GalleryItem';
 import { withRouter } from 'storybook-addon-react-router-v6';
 
-// import { withRouter } from 'storybook-addon-react-router-v6';
-
-// export default {
-//   title: 'User Profile',
-//   component: UserProfile,
-//   decorators: [withRouter],
-//   parameters: {
-//     reactRouter: {
-//       routePath: '/users/:userId',
-//       routeParams: { userId: '42' },
-//     }
-//   }
-// };
-
-// export const Example = () => <UserProfile />;
+import GalleryItem from './GalleryItem';
 
 export default {
   title: 'GalleryItem',
